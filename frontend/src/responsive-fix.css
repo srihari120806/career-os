@@ -1,0 +1,26 @@
+/* CareerOS responsive overflow fix */
+html,body,#root{width:100%;max-width:100%;overflow-x:hidden}
+.app{width:100%;min-width:0;overflow-x:hidden}
+.main{min-width:0;max-width:none}
+.hero-goat,.hero-copy,.hero-readiness{min-width:0}
+.hero-copy{width:100%}
+.hero-goat h2{max-width:100%;overflow-wrap:anywhere;text-wrap:balance}
+@media (max-width: 880px){
+  .hero-goat{display:flex;flex-direction:column;align-items:stretch;min-height:0;padding:28px}
+  .hero-copy{max-width:none;width:100%}
+  .hero-goat h2{font-size:clamp(28px,6vw,42px);line-height:1.06;letter-spacing:-.04em}
+  .hero-goat p{max-width:100%}
+  .hero-meta{flex-wrap:wrap;gap:10px 16px}
+  .hero-readiness{position:relative;right:auto;top:auto;bottom:auto;width:145px;height:145px;align-self:center;margin:28px auto 2px;flex:0 0 auto}
+  .readiness-core{width:104px;height:104px}
+  .readiness-core strong{font-size:28px}
+  .readiness-core:before{transform:translate(58px,-45px)}
+}
+@media (max-width:570px){
+  .hero-goat{padding:24px;min-height:0}
+  .hero-goat h2{font-size:clamp(27px,8vw,34px)}
+  .hero-actions{flex-wrap:wrap}
+  .hero-meta{flex-direction:column;gap:7px}
+  .hero-readiness{margin-top:24px;width:135px;height:135px}
+  .readiness-core{width:96px;height:96px}
+}
