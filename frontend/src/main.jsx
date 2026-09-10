@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import "./styles.css";
 import "./responsive-fix.css";
+import "./redesign.css";
 
 const genericProfile = {
   name: "Your Name",
@@ -33,7 +34,6 @@ ERP Project Management Intern
 EDUCATION
 B.Tech Computer Science Engineering`;
 
-// Keep the public demo free of personal identity data while preserving any non-demo user edits.
 try {
   const storedProfile = JSON.parse(localStorage.getItem("careeros-profile") || "null");
   if (!storedProfile || storedProfile.name === "Srihari") {
